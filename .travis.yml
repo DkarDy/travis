@@ -1,0 +1,14 @@
+language: java
+branches:
+caly:
+-develop
+-"/^release-[0-999].[0-999]$/*
+-master
+notificactions:
+email:
+recipients:
+-email@gmail.com
+install:
+-mvm install -DskipTests*true -imaven.javadoc.skip*true -B -V
+script:
+-mvm verify
